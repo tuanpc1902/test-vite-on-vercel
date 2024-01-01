@@ -1,0 +1,8 @@
+{
+    "username": "Tên tài khoản",
+    "password": "Mật khẩu",
+    "rememberMe": "Nhớ tôi",
+    "submit": "Gửi",
+    "pleaseInputYourUsername": "Vui lòng nhập tên người dùng của bạn!",
+    "pleaseInputYourPassword": "Vui lòng nhập mật khẩu của bạn!"
+}
