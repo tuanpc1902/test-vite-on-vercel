@@ -33,8 +33,8 @@ function App() {
                 />
                 <div className="language">{`Current language: ${language}`}</div>
                 <div className="test-translate">{translate("test")}</div>
-                <AccountWithdrawalPage />
             </Space>
+            <AccountWithdrawalPage />
         </>
     );
 }

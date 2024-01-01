@@ -7,17 +7,17 @@ type FieldType = {
     remember?: string;
 };
 
-type ErrorField = {
-    errors: string[];
-    name: string[];
-    warning: string[];
-};
+// type ErrorField = {
+//     errors: string[];
+//     name: string[];
+//     warning: string[];
+// };
 
-type FinishFailed = {
-    errorFields: ErrorField[];
-    outOfDate: string;
-    values: FieldType;
-};
+// type FinishFailed = {
+//     errorFields: ErrorField[];
+//     outOfDate: string;
+//     values: FieldType;
+// };
 
 function AccountWithdrawalPage() {
     const translate = useTranslation("account-withdrawal-page").t;
@@ -25,7 +25,7 @@ function AccountWithdrawalPage() {
         console.log("Success:", values);
     };
 
-    const onFinishFailed = (errorInfo: FinishFailed) => {
+    const onFinishFailed = (errorInfo: unknown) => {
         console.log("Failed:", errorInfo);
     };
 
@@ -33,9 +33,9 @@ function AccountWithdrawalPage() {
         <div className="account-withdrawal-page">
             <Form
                 name="basic"
-                labelCol={{ span: 8 }}
-                wrapperCol={{ span: 16 }}
-                style={{ maxWidth: 600 }}
+                labelCol={{ span: 12 }}
+                wrapperCol={{ span: 24 }}
+                style={{width: 600}}
                 initialValues={{ remember: true }}
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
@@ -64,12 +64,12 @@ function AccountWithdrawalPage() {
                 <Form.Item<FieldType>
                     name="remember"
                     valuePropName="checked"
-                    wrapperCol={{ offset: 8, span: 16 }}
+                    wrapperCol={{ offset: 6, span: 16 }}
                 >
                     <Checkbox>{translate("rememberMe")}</Checkbox>
                 </Form.Item>
 
-                <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                <Form.Item wrapperCol={{ offset: 6, span: 16 }}>
                     <Button type="primary" htmlType="submit">
                         {translate("submit")}
                     </Button>
