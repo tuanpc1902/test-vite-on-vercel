@@ -14,12 +14,11 @@ function App() {
 
     return (
         <>
-
             <Space size={20} align="center" direction="vertical" wrap>
-            <Select
+                <Select
                     defaultValue={language ?? "English"}
                     onChange={onChangeLanguage}
-                    style={{ width: 120, position: 'absolute', top: 50 }}
+                    style={{ width: 120, position: "absolute", top: 50 }}
                     options={[
                         {
                             value: "en",
